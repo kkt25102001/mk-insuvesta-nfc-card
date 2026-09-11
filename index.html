@@ -57,60 +57,40 @@
 
     <!-- Profile Hero Card Section -->
     <section class="card-hero" id="profile">
-      <!-- Luxury Card Header Banner with Official MK InsuVesta Services Logo -->
+      <!-- Luxury Card Header Banner with Exact Original MK InsuVesta Logo (100% Masked Transparency) -->
       <div class="hero-banner">
         <div class="banner-pattern"></div>
         <div class="hero-brand-center">
-          <img src="logo.png" alt="MK InsuVesta Services" class="official-logo-img" id="bannerLogoImg" onerror="if(!this.dataset.triedJpg){this.dataset.triedJpg=1;this.src='logo.jpg';}else if(!this.dataset.triedJpeg){this.dataset.triedJpeg=1;this.src='logo.jpeg';}else{this.style.display='none';document.getElementById('svgLogoFallback').style.display='flex';}" />
-          
-          <div class="banner-svg-logo-fallback" id="svgLogoFallback" style="display: none;">
-            <div class="banner-shield-icon">
-              <svg viewBox="0 0 100 115" class="shield-svg-prominent">
-                <defs>
-                  <linearGradient id="shieldGoldHd" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#fff2a8" />
-                    <stop offset="50%" stop-color="#d4af37" />
-                    <stop offset="100%" stop-color="#8f6409" />
-                  </linearGradient>
-                  <linearGradient id="shieldBlueHd" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#0e2a5e" />
-                    <stop offset="100%" stop-color="#041026" />
-                  </linearGradient>
-                  <linearGradient id="redGradHd" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#ff3b3b" />
-                    <stop offset="100%" stop-color="#b80000" />
-                  </linearGradient>
-                  <linearGradient id="blueGradHd" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#2172ff" />
-                    <stop offset="100%" stop-color="#08388c" />
-                  </linearGradient>
-                </defs>
-                <!-- Outer Shield Border -->
-                <path d="M50,3 L94,22 C94,68 50,110 50,110 C50,110 6,68 6,22 Z" fill="url(#shieldBlueHd)" stroke="url(#shieldGoldHd)" stroke-width="4.5" />
-                <!-- Inner Growth Chart Bars -->
-                <rect x="40" y="30" width="7" height="24" rx="2" fill="url(#blueGradHd)" />
-                <rect x="51" y="22" width="7" height="32" rx="2" fill="url(#blueGradHd)" />
-                <rect x="62" y="14" width="7" height="40" rx="2" fill="url(#blueGradHd)" />
-                <!-- Red Growth Line -->
-                <path d="M36,36 L51,22 L62,12 L76,8" fill="none" stroke="url(#redGradHd)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
-                <circle cx="76" cy="8" r="3.8" fill="#ff3b3b" />
-                <!-- MK Monogram Inside Shield -->
-                <text x="35" y="86" font-family="'Outfit', sans-serif" font-weight="900" font-size="34" fill="url(#redGradHd)" text-anchor="middle">M</text>
-                <text x="68" y="86" font-family="'Outfit', sans-serif" font-weight="900" font-size="34" fill="url(#blueGradHd)" text-anchor="middle">K</text>
-              </svg>
-            </div>
-            <div class="banner-brand-text">
-              <div class="banner-title-line">
-                <span class="brand-text-red">MK</span>
-                <span class="brand-text-blue">InsuVesta</span>
-              </div>
-              <div class="banner-services-line">
-                <span class="gold-wing-decor left"></span>
-                <span class="services-title-red">Services</span>
-                <span class="gold-wing-decor right"></span>
-              </div>
-              <span class="banner-slogan-italic">Insure with <strong class="red-s">Confidence</strong>, Investment with <strong class="red-s">Ease</strong></span>
-            </div>
+          <div class="banner-logo-svg-wrapper">
+            <svg viewBox="0 0 1000 1000" class="exact-logo-svg" preserveAspectRatio="xMidYMid meet">
+              <defs>
+                <!-- Filter to turn outer white background black (transparent) and logo content solid white in mask -->
+                <filter id="logoWhiteMaskFilter" color-interpolation-filters="sRGB">
+                  <feColorMatrix type="matrix" values="
+                    -3.2 -3.2 -3.2 0 8.8
+                    -3.2 -3.2 -3.2 0 8.8
+                    -3.2 -3.2 -3.2 0 8.8
+                    0 0 0 1 0" />
+                </filter>
+                
+                <!-- SVG Mask containing the filtered logo image -->
+                <mask id="exactLogoMask">
+                  <image href="logo.jpeg" x="0" y="0" width="1000" height="1000" filter="url(#logoWhiteMaskFilter)" />
+                </mask>
+
+                <!-- Glow filter to make the exact original dark navy & red text pop brilliantly on dark banner -->
+                <filter id="logoBacklightGlow" x="-20%" y="-20%" width="140%" height="140%">
+                  <feDropShadow dx="0" dy="0" stdDeviation="2.5" flood-color="#ffffff" flood-opacity="0.9" />
+                  <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#ffffff" flood-opacity="0.4" />
+                  <feDropShadow dx="0" dy="5" stdDeviation="12" flood-color="#000000" flood-opacity="0.9" />
+                </filter>
+              </defs>
+
+              <!-- Exact Original Logo Image (logo.jpeg) with White Background 100% Masked Out -->
+              <g filter="url(#logoBacklightGlow)">
+                <image href="logo.jpeg" x="0" y="0" width="1000" height="1000" mask="url(#exactLogoMask)" />
+              </g>
+            </svg>
           </div>
         </div>
       </div>

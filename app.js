@@ -84,22 +84,22 @@ function initProfileImageAutoDetect() {
 }
 
 /**
- * 0.1 Smart Logo Auto-Detect (.png, .jpg, .jpeg, .webp)
+ * 0.1 Smart Logo Auto-Detect & Background Transparency Engine
  */
 function initLogoAutoDetect() {
   const logoImg = document.getElementById("bannerLogoImg");
-  const fallback = document.getElementById("svgLogoFallback");
   if (!logoImg) return;
 
   const candidateLogos = [
+    "logo.jpeg",
     "logo.png",
     "logo.jpg",
-    "logo.jpeg",
     "logo.webp",
     "logo.PNG",
     "logo.JPG",
     "logo.JPEG",
     "assets/logo.png",
+    "assets/logo.jpeg",
     "assets/logo.jpg"
   ];
 
@@ -112,19 +112,137 @@ function initLogoAutoDetect() {
       testImg.onload = function() {
         logoImg.src = src;
         logoImg.style.display = "block";
-        if (fallback) fallback.style.display = "none";
+        makeLogoTransparent(logoImg);
       };
       testImg.onerror = function() {
         tryNextLogo();
       };
       testImg.src = src;
-    } else {
-      logoImg.style.display = "none";
-      if (fallback) fallback.style.display = "flex";
     }
   }
 
-  tryNextLogo();
+  // Also process initial image if already loaded
+  if (logoImg.complete && logoImg.naturalWidth > 0) {
+    makeLogoTransparent(logoImg);
+  } else {
+    logoImg.addEventListener("load", () => makeLogoTransparent(logoImg), { once: true });
+    tryNextLogo();
+  }
+}
+
+/**
+ * Intelligent Pixel-Level White Background Remover
+ * Accurately removes exterior white background using BFS flood-fill and converts to transparent PNG
+ */
+function makeLogoTransparent(imgElement) {
+  if (!imgElement || imgElement.dataset.bgProcessed === "1") return;
+
+  function processImage() {
+    try {
+      const canvas = document.createElement("canvas");
+      const w = imgElement.naturalWidth || imgElement.width || 400;
+      const h = imgElement.naturalHeight || imgElement.height || 400;
+      if (w === 0 || h === 0) return;
+
+      canvas.width = w;
+      canvas.height = h;
+      const ctx = canvas.getContext("2d", { willReadFrequently: true });
+      ctx.drawImage(imgElement, 0, 0, w, h);
+
+      const imgData = ctx.getImageData(0, 0, w, h);
+      const data = imgData.data;
+
+      function isWhitePixel(idx) {
+        const r = data[idx];
+        const g = data[idx + 1];
+        const b = data[idx + 2];
+        return (r > 200 && g > 200 && b > 200) || (r + g + b > 620);
+      }
+
+      // BFS Flood-fill from outer perimeter to remove exterior white background
+      const visited = new Uint8Array(w * h);
+      const queue = [];
+
+      for (let x = 0; x < w; x++) {
+        queue.push(x, 0);
+        queue.push(x, h - 1);
+        visited[x] = 1;
+        visited[(h - 1) * w + x] = 1;
+      }
+      for (let y = 0; y < h; y++) {
+        queue.push(0, y);
+        queue.push(w - 1, y);
+        visited[y * w] = 1;
+        visited[y * w + (w - 1)] = 1;
+      }
+
+      let head = 0;
+      while (head < queue.length) {
+        const cx = queue[head++];
+        const cy = queue[head++];
+        const pIdx = (cy * w + cx) * 4;
+
+        if (isWhitePixel(pIdx)) {
+          const r = data[pIdx];
+          const g = data[pIdx + 1];
+          const b = data[pIdx + 2];
+          const brightness = (r + g + b) / 3;
+
+          if (brightness >= 235) {
+            data[pIdx + 3] = 0; // Pure Transparent
+          } else {
+            data[pIdx + 3] = Math.max(0, Math.floor((255 - brightness) / 55 * 255));
+          }
+
+          const neighbors = [
+            [cx + 1, cy],
+            [cx - 1, cy],
+            [cx, cy + 1],
+            [cx, cy - 1]
+          ];
+
+          for (let i = 0; i < neighbors.length; i++) {
+            const nx = neighbors[i][0];
+            const ny = neighbors[i][1];
+            if (nx >= 0 && nx < w && ny >= 0 && ny < h) {
+              const nCoord = ny * w + nx;
+              if (!visited[nCoord]) {
+                visited[nCoord] = 1;
+                const nIdx = nCoord * 4;
+                if (isWhitePixel(nIdx)) {
+                  queue.push(nx, ny);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      // Clean remaining pure white artifacts
+      for (let i = 0; i < data.length; i += 4) {
+        const r = data[i];
+        const g = data[i + 1];
+        const b = data[i + 2];
+        if (r > 240 && g > 240 && b > 240) {
+          data[i + 3] = 0;
+        }
+      }
+
+      ctx.putImageData(imgData, 0, 0);
+      const transparentDataUrl = canvas.toDataURL("image/png");
+      imgElement.dataset.bgProcessed = "1";
+      imgElement.src = transparentDataUrl;
+      imgElement.classList.add("logo-transparent-loaded");
+    } catch (e) {
+      console.warn("Client-side background transparency note:", e);
+    }
+  }
+
+  if (imgElement.complete && imgElement.naturalWidth > 0) {
+    processImage();
+  } else {
+    imgElement.addEventListener("load", processImage, { once: true });
+  }
 }
 
 // Update Copyright Year
