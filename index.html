@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Mukesh K. Brahmbhatt | MK InsuVesta Services — NFC Digital Card</title>
+  <meta name="description" content="Official NFC Digital Card & Financial Portal for Mukesh K. Brahmbhatt (MK InsuVesta Services) - AMFI Registered Mutual Fund Distributor, LIC Advisor, TATA AIG General Insurance, HDFC Pension & Andromeda Loan Partner." />
+  <meta name="keywords" content="Mukesh Brahmbhatt, MK InsuVesta Services, Mutual Funds, Life Insurance LIC, TATA AIG Insurance, HDFC Pension NPS, Andromeda Loans, Ahmedabad Financial Advisor, Tragad Vaishnodevi" />
+  <meta name="author" content="Mukesh K. Brahmbhatt" />
+
+  <!-- Open Graph / Meta for Social Sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Mukesh K. Brahmbhatt | MK InsuVesta Services" />
+  <meta property="og:description" content="Insure with Confidence, Investment with Ease. AMFI Registered Mutual Fund Distributor & Complete Financial Solutions." />
+  <meta property="og:image" content="assets/card-preview.png" />
+  <meta name="theme-color" content="#060e1d" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Dynamic Ambient Background Lighting -->
+  <div class="bg-mesh">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <!-- Main Container -->
+  <main class="app-wrapper">
+
+    <!-- Top Floating Actions & NFC Indicator -->
+    <header class="top-nav">
+      <div class="nfc-badge">
+        <span class="nfc-pulse"></span>
+        <i class="fa-solid fa-wifi fa-rotate-90"></i>
+        <span>NFC Smart Card</span>
+      </div>
+      <div class="top-actions">
+        <button id="shareBtn" class="icon-action-btn" title="Share Digital Card" aria-label="Share Card">
+          <i class="fa-solid fa-share-nodes"></i>
+        </button>
+        <button id="qrBtn" class="icon-action-btn" title="Show QR Code" aria-label="QR Code">
+          <i class="fa-solid fa-qrcode"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Profile Hero Card Section -->
+    <section class="card-hero" id="profile">
+      <!-- Luxury Card Header Banner -->
+      <div class="hero-banner">
+        <div class="banner-pattern"></div>
+        <div class="brand-shield-wrapper">
+          <div class="brand-shield">
+            <svg viewBox="0 0 100 115" class="shield-svg">
+              <defs>
+                <linearGradient id="shieldGold" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#f7d070" />
+                  <stop offset="50%" stop-color="#d4af37" />
+                  <stop offset="100%" stop-color="#aa7c11" />
+                </linearGradient>
+                <linearGradient id="shieldBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#0a2558" />
+                  <stop offset="100%" stop-color="#051330" />
+                </linearGradient>
+                <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#ff3333" />
+                  <stop offset="100%" stop-color="#b30000" />
+                </linearGradient>
+                <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#1e6fff" />
+                  <stop offset="100%" stop-color="#003899" />
+                </linearGradient>
+              </defs>
+              <!-- Shield Outer Border -->
+              <path d="M50,3 L94,22 C94,68 50,110 50,110 C50,110 6,68 6,22 Z" fill="url(#shieldBlue)" stroke="url(#shieldGold)" stroke-width="4" />
+              <!-- Inner Shield Chart / MK Symbol -->
+              <!-- Bar 1 -->
+              <rect x="42" y="32" width="6" height="22" rx="2" fill="url(#blueGrad)" />
+              <!-- Bar 2 -->
+              <rect x="52" y="24" width="6" height="30" rx="2" fill="url(#blueGrad)" />
+              <!-- Bar 3 with trend arrow -->
+              <rect x="62" y="16" width="6" height="38" rx="2" fill="url(#blueGrad)" />
+              <path d="M38,36 L52,24 L62,14 L74,10" fill="none" stroke="url(#redGrad)" stroke-width="3.5" stroke-linecap="round" />
+              <circle cx="74" cy="10" r="3.5" fill="#ff3333" />
+              <!-- MK Monogram -->
+              <text x="50" y="86" font-family="'Outfit', sans-serif" font-weight="900" font-size="34" text-anchor="middle">
+                <tspan fill="url(#redGrad)">M</tspan><tspan fill="url(#blueGrad)">K</tspan>
+              </text>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Avatar & Verified Badge -->
+      <div class="avatar-container">
+        <div class="avatar-ring">
+          <img src="../../brain/7e149b9f-8436-4578-8baf-eca7a306eb64/mukesh_photo_1789111460027.jpg" alt="Mukesh K. Brahmbhatt" class="avatar-img" id="avatarImg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80'" />
+          <div class="verified-tick" title="Verified Financial Advisor">
+            <i class="fa-solid fa-check"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Profile Details -->
+      <div class="profile-meta">
+        <h1 class="person-name">MUKESH K. BRAHMBHATT</h1>
+        
+        <!-- Company & Slogan -->
+        <div class="company-badge-box">
+          <div class="brand-title">
+            <span class="red-text">MK</span> <span class="blue-text">InsuVesta Services</span>
+          </div>
+          <p class="brand-tagline">“Insure with <span class="bold red-text">Confidence</span>, Investment with <span class="bold red-text">Ease</span>”</p>
+        </div>
+
+        <!-- AMFI Gold Ribbon -->
+        <div class="amfi-ribbon">
+          <div class="ribbon-decor left"></div>
+          <div class="ribbon-content">
+            <span class="ribbon-stars">★★★★★</span>
+            <span class="ribbon-text">AMFI REGISTERED MUTUAL FUND DISTRIBUTOR</span>
+            <span class="ribbon-stars">★★★★★</span>
+          </div>
+          <div class="ribbon-decor right"></div>
+        </div>
+
+        <!-- Core Roles / Designation pills -->
+        <div class="role-pills">
+          <span class="role-pill"><i class="fa-solid fa-shield-halved"></i> LIC Life Insurance Advisor</span>
+          <span class="role-pill"><i class="fa-solid fa-heart-pulse"></i> TATA AIG General Insurance</span>
+          <span class="role-pill"><i class="fa-solid fa-chart-line"></i> NJ Wealth Partner</span>
+          <span class="role-pill"><i class="fa-solid fa-landmark"></i> Andromeda Loan DSA Partner</span>
+          <span class="role-pill"><i class="fa-solid fa-umbrella"></i> HDFC Pension (NPS)</span>
+        </div>
+      </div>
+
+      <!-- 🌟 PRIMARY ACTION: Save Contact to Phone (vCard .vcf) -->
+      <div class="save-contact-wrapper">
+        <button id="saveContactBtn" class="btn-save-contact">
+          <div class="btn-shine"></div>
+          <div class="btn-icon-circle">
+            <i class="fa-solid fa-user-plus"></i>
+          </div>
+          <div class="btn-text-group">
+            <span class="btn-main-label">SAVE CONTACT TO PHONE</span>
+            <span class="btn-sub-label">Direct vCard Import (.vcf) • 1-Tap Save</span>
+          </div>
+          <i class="fa-solid fa-arrow-down-to-bracket save-arrow"></i>
+        </button>
+      </div>
+
+      <!-- Quick Action Buttons (Call, WhatsApp, Email, Location) -->
+      <div class="quick-actions-grid">
+        <a href="tel:+919898998238" class="quick-action-item call" id="callAction">
+          <div class="action-icon">
+            <i class="fa-solid fa-phone-volume"></i>
+          </div>
+          <span class="action-label">Call Now</span>
+          <span class="action-sub">+91 98989 98238</span>
+        </a>
+
+        <a href="https://wa.me/919898998238?text=Hello%20Mukesh%20ji%2C%20I%20visited%20your%20MK%20InsuVesta%20NFC%20Card.%20I%20would%20like%20to%20consult%20regarding%20Financial%20Services." target="_blank" rel="noopener" class="quick-action-item whatsapp" id="whatsappAction">
+          <div class="action-icon">
+            <i class="fa-brands fa-whatsapp"></i>
+          </div>
+          <span class="action-label">WhatsApp</span>
+          <span class="action-sub">Instant Chat</span>
+        </a>
+
+        <a href="mailto:mksh.brahmbhatt@gmail.com?subject=Financial%20Inquiry%20-%20MK%20InsuVesta%20Services" class="quick-action-item email" id="emailAction">
+          <div class="action-icon">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <span class="action-label">Email</span>
+          <span class="action-sub">mksh.brahmbhatt</span>
+        </a>
+
+        <a href="https://maps.google.com/?q=Anand+ilyf+Vaishnodevi+Underpass+Tragad+Ahmedabad+382470" target="_blank" rel="noopener" class="quick-action-item maps" id="mapsAction">
+          <div class="action-icon">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <span class="action-label">Directions</span>
+          <span class="action-sub">Ahmedabad</span>
+        </a>
+      </div>
+
+      <!-- Social Channels Bar -->
+      <div class="social-channels-bar">
+        <span class="social-title">Connect on Social Media:</span>
+        <div class="social-links-row">
+          <a href="https://www.facebook.com/share/1CqA5ZW2k8/" target="_blank" rel="noopener" class="social-pill fb" aria-label="Facebook Profile">
+            <i class="fa-brands fa-facebook-f"></i>
+            <span>Facebook</span>
+          </a>
+          <a href="https://www.instagram.com/mksh.brahmbhatt?utm_source=qr&stkn=MWRuNmp3dms2Zmw4bg==" target="_blank" rel="noopener" class="social-pill ig" aria-label="Instagram Profile">
+            <i class="fa-brands fa-instagram"></i>
+            <span>Instagram</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 Institutional Partner Brand Showcase Strip (Matching Banner Image) -->
+    <section class="partner-strip-section">
+      <div class="partner-strip-header">
+        <span class="gold-line"></span>
+        <span class="strip-title">AUTHORIZED FINANCIAL PARTNERS</span>
+        <span class="gold-line"></span>
+      </div>
+      <div class="partner-circles-row">
+        <!-- 1. LIC -->
+        <div class="partner-badge-card" onclick="openServiceDetail('Life Insurance')">
+          <div class="p-circle-logo lic-circle">
+            <svg viewBox="0 0 100 100" class="p-svg-logo">
+              <circle cx="50" cy="50" r="48" fill="#ffffff" stroke="#0055aa" stroke-width="3" />
+              <!-- Blue inner circle with LIC Hands holding flame -->
+              <circle cx="50" cy="50" r="42" fill="#004085" />
+              <circle cx="50" cy="38" r="6" fill="#f5c518" />
+              <path d="M50 25 C50 25 45 32 50 38 C55 32 50 25 50 25 Z" fill="#ff4d4d" />
+              <!-- Hands -->
+              <path d="M34 52 C37 42 45 44 48 48 C44 54 36 55 34 52 Z" fill="#f5c518" />
+              <path d="M66 52 C63 42 55 44 52 48 C56 54 64 55 66 52 Z" fill="#f5c518" />
+              <!-- LIC Text -->
+              <text x="50" y="74" font-family="'Outfit', sans-serif" font-weight="900" font-size="20" fill="#f5c518" text-anchor="middle">LIC</text>
+            </svg>
+          </div>
+          <div class="p-badge-info">
+            <span class="p-name-bold">Life Insurance</span>
+            <span class="p-sub-text">Security for Your Family</span>
+          </div>
+        </div>
+
+        <!-- 2. NJ Wealth -->
+        <div class="partner-badge-card" onclick="openServiceDetail('Mutual Funds & SIP')">
+          <div class="p-circle-logo nj-circle">
+            <svg viewBox="0 0 100 100" class="p-svg-logo">
+              <circle cx="50" cy="50" r="48" fill="#ffffff" stroke="#e2e8f0" stroke-width="2" />
+              <!-- NJ monogram -->
+              <text x="36" y="55" font-family="'Outfit', sans-serif" font-weight="900" font-size="42" fill="#0052cc">N</text>
+              <text x="64" y="55" font-family="'Outfit', sans-serif" font-weight="900" font-size="46" fill="#e60000">j</text>
+              <!-- Wealth Partner Red Box -->
+              <rect x="15" y="65" width="70" height="18" rx="4" fill="#cc0000" />
+              <text x="50" y="78" font-family="'Outfit', sans-serif" font-weight="800" font-size="8" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">WEALTH PARTNER</text>
+            </svg>
+          </div>
+          <div class="p-badge-info">
+            <span class="p-name-bold">Mutual funds</span>
+            <span class="p-sub-text">Plan Today, Prosper Tomorrow</span>
+          </div>
+        </div>
+
+        <!-- 3. TATA AIG -->
+        <div class="partner-badge-card" onclick="openServiceDetail('General Insurance')">
+          <div class="p-circle-logo tata-circle">
+            <svg viewBox="0 0 100 100" class="p-svg-logo">
+              <circle cx="50" cy="50" r="48" fill="#ffffff" stroke="#e2e8f0" stroke-width="2" />
+              <rect x="16" y="16" width="68" height="68" rx="6" fill="#0a2a5c" />
+              <text x="50" y="38" font-family="'Outfit', sans-serif" font-weight="800" font-size="14" fill="#ffffff" text-anchor="middle">TATA</text>
+              <text x="50" y="56" font-family="'Outfit', sans-serif" font-weight="900" font-size="18" fill="#ffffff" text-anchor="middle">AIG</text>
+              <text x="50" y="68" font-family="'Outfit', sans-serif" font-weight="700" font-size="7" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">INSURANCE</text>
+              <text x="50" y="78" font-family="'Outfit', sans-serif" font-weight="600" font-size="5.5" fill="#f5c518" text-anchor="middle">WITH YOU ALWAYS</text>
+            </svg>
+          </div>
+          <div class="p-badge-info">
+            <span class="p-name-bold">Gen. Insurance</span>
+            <span class="p-sub-text">Protection in Every Situation</span>
+          </div>
+        </div>
+
+        <!-- 4. HDFC PENSION -->
+        <div class="partner-badge-card" onclick="openServiceDetail('NPS Pension')">
+          <div class="p-circle-logo hdfc-circle">
+            <svg viewBox="0 0 100 100" class="p-svg-logo">
+              <circle cx="50" cy="50" r="48" fill="#ffffff" stroke="#e2e8f0" stroke-width="2" />
+              <!-- HDFC Red Box Logo -->
+              <rect x="22" y="30" width="22" height="22" fill="#d9222a" />
+              <rect x="28" y="36" width="10" height="10" fill="#ffffff" />
+              <rect x="31" y="28" width="4" height="26" fill="#003366" />
+              <!-- Text -->
+              <text x="48" y="42" font-family="'Outfit', sans-serif" font-weight="900" font-size="13" fill="#d9222a">HDFC</text>
+              <text x="48" y="52" font-family="'Outfit', sans-serif" font-weight="800" font-size="9" fill="#003366">PENSION</text>
+            </svg>
+          </div>
+          <div class="p-badge-info">
+            <span class="p-name-bold">National Pension Scheme</span>
+            <span class="p-sub-text">Secure Today, Confident Tomorrow</span>
+          </div>
+        </div>
+
+        <!-- 5. ANDROMEDA -->
+        <div class="partner-badge-card" onclick="openServiceDetail('Loans & Finance')">
+          <div class="p-circle-logo andromeda-circle">
+            <svg viewBox="0 0 100 100" class="p-svg-logo">
+              <circle cx="50" cy="50" r="48" fill="#ffffff" stroke="#e2e8f0" stroke-width="2" />
+              <!-- Triangle Geometric Logo -->
+              <polygon points="50,20 28,60 72,60" fill="none" stroke="#0099cc" stroke-width="6" stroke-linejoin="round" />
+              <polygon points="50,28 35,56 65,56" fill="#0099cc" opacity="0.3" />
+              <!-- Text -->
+              <text x="50" y="74" font-family="'Outfit', sans-serif" font-weight="900" font-size="10" fill="#003366" text-anchor="middle" letter-spacing="1">ANDROMEDA</text>
+              <text x="50" y="82" font-family="'Outfit', sans-serif" font-weight="600" font-size="5" fill="#64748b" text-anchor="middle">India's Largest Loan Distributor</text>
+            </svg>
+          </div>
+          <div class="p-badge-info">
+            <span class="p-name-bold">Loans & Finance</span>
+            <span class="p-sub-text">Home • Education • Car • Business</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust & Value Pillars (3 Core Guarantees with Golden Badges) -->
+    <section class="trust-pillars-section">
+      <div class="trust-pillars-grid">
+        <!-- 1. TRANSPARENCY -->
+        <div class="pillar-card">
+          <div class="pillar-svg-badge">
+            <svg viewBox="0 0 60 60" class="pillar-badge-svg" aria-hidden="true">
+              <defs>
+                <linearGradient id="goldBadgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#fff3b0" />
+                  <stop offset="45%" stop-color="#d4af37" />
+                  <stop offset="100%" stop-color="#8f6409" />
+                </linearGradient>
+              </defs>
+              <circle cx="30" cy="30" r="27" fill="none" stroke="url(#goldBadgeGrad)" stroke-width="2.5" />
+              <circle cx="30" cy="30" r="23" fill="#08152b" stroke="url(#goldBadgeGrad)" stroke-width="1.2" opacity="0.9" />
+              <!-- Shield Shape -->
+              <path d="M30 14 L42 19.5 C42 31.5 30 43 30 43 C30 43 18 31.5 18 19.5 Z" fill="url(#goldBadgeGrad)" />
+              <path d="M30 17 L39 21 C39 29.5 30 38.5 30 38.5 C30 38.5 21 29.5 21 21 Z" fill="#091b36" />
+              <!-- Checkmark -->
+              <path d="M25 28.5 L28.5 32 L35.5 23.5" fill="none" stroke="url(#goldBadgeGrad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <div class="pillar-info">
+            <h4>TRANSPARENCY</h4>
+            <p>You Can Trust</p>
+          </div>
+        </div>
+
+        <!-- 2. ONE STOP SOLUTION -->
+        <div class="pillar-card">
+          <div class="pillar-svg-badge">
+            <svg viewBox="0 0 60 60" class="pillar-badge-svg" aria-hidden="true">
+              <circle cx="30" cy="30" r="27" fill="none" stroke="url(#goldBadgeGrad)" stroke-width="2.5" />
+              <circle cx="30" cy="30" r="23" fill="#08152b" stroke="url(#goldBadgeGrad)" stroke-width="1.2" opacity="0.9" />
+              <!-- Handshake Icon SVG -->
+              <g fill="url(#goldBadgeGrad)" transform="translate(13, 16) scale(0.68)">
+                <path d="M25.5 18.2L19.2 12c-1.1-1.1-2.9-1.1-4 0l-2.8 2.8 3.5 3.5c.8.8.8 2 0 2.8s-2 .8-2.8 0L9.6 17.6l-2.1 2.1c-.8.8-.8 2 0 2.8l6.4 6.4c.8.8 2 .8 2.8 0l1.4-1.4 2.8 2.8c.8.8 2 .8 2.8 0s.8-2 0-2.8l-2.8-2.8 1.4-1.4 3.2 3.2z"/>
+                <path d="M43.2 12.8L37 6.6c-1.1-1.1-2.9-1.1-4 0l-7.7 7.7 5.7 5.7 5.9-5.9 3.5 3.5c.8.8 2 .8 2.8 0s.8-2 0-2.8l-3.5-3.5 2.1-2.1c.8-.7 2-.7 2.8 0l6.4 6.4c.8.8.8 2 0 2.8l-7.8 7.8 2.8 2.8 9.2-9.2c1.1-1.1 1.1-2.9 0-4z"/>
+                <path d="M2.8 26.2c-1.1 1.1-1.1 2.9 0 4l11.3 11.3c1.1 1.1 2.9 1.1 4 0l4.2-4.2-5.7-5.7-4.2 4.2-7-7 2.8-2.8-5.4-5.4v5.6z"/>
+                <path d="M47.2 26.2l-5.4 5.4 2.8 2.8-7 7-4.2-4.2-5.7 5.7 4.2 4.2c1.1 1.1 2.9 1.1 4 0l11.3-11.3c1.1-1.1 1.1-2.9 0-4v-5.6z"/>
+              </g>
+            </svg>
+          </div>
+          <div class="pillar-info">
+            <h4>ONE STOP SOLUTION</h4>
+            <p>For All Financial Needs</p>
+          </div>
+        </div>
+
+        <!-- 3. COMMITMENT -->
+        <div class="pillar-card">
+          <div class="pillar-svg-badge">
+            <svg viewBox="0 0 60 60" class="pillar-badge-svg" aria-hidden="true">
+              <circle cx="30" cy="30" r="27" fill="none" stroke="url(#goldBadgeGrad)" stroke-width="2.5" />
+              <circle cx="30" cy="30" r="23" fill="#08152b" stroke="url(#goldBadgeGrad)" stroke-width="1.2" opacity="0.9" />
+              <!-- Bullseye Target with Arrow SVG -->
+              <circle cx="28" cy="32" r="14" fill="none" stroke="url(#goldBadgeGrad)" stroke-width="2.2" />
+              <circle cx="28" cy="32" r="9" fill="none" stroke="url(#goldBadgeGrad)" stroke-width="1.8" />
+              <circle cx="28" cy="32" r="3.5" fill="url(#goldBadgeGrad)" />
+              <!-- Arrow Strike -->
+              <path d="M44 14 L29.5 29.5" stroke="url(#goldBadgeGrad)" stroke-width="2.6" stroke-linecap="round" />
+              <polygon points="46,12 40,14 44,18" fill="url(#goldBadgeGrad)" />
+              <path d="M38 14 L44 20" stroke="url(#goldBadgeGrad)" stroke-width="1.8" stroke-linecap="round" />
+            </svg>
+          </div>
+          <div class="pillar-info">
+            <h4>COMMITMENT</h4>
+            <p>You Can Rely On</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Navigation Tabs -->
+    <nav class="section-tabs" id="sectionTabs">
+      <button class="tab-btn active" data-target="tab-services">
+        <i class="fa-solid fa-briefcase"></i>
+        <span>Services</span>
+      </button>
+      <button class="tab-btn" data-target="tab-partners">
+        <i class="fa-solid fa-building-columns"></i>
+        <span>Alliances</span>
+      </button>
+      <button class="tab-btn" data-target="tab-calculators">
+        <i class="fa-solid fa-calculator"></i>
+        <span>Calculators</span>
+      </button>
+      <button class="tab-btn" data-target="tab-contact">
+        <i class="fa-solid fa-address-card"></i>
+        <span>Contact</span>
+      </button>
+    </nav>
+
+    <!-- TAB 1: Complete Services Portfolio -->
+    <section class="tab-pane active" id="tab-services">
+      <div class="section-header">
+        <span class="section-badge">WHAT WE OFFER</span>
+        <h2 class="section-title">Comprehensive Financial Solutions</h2>
+        <p class="section-subtitle">Tailored investment, protection, and loan solutions engineered to protect and multiply your wealth.</p>
+      </div>
+
+      <div class="services-list">
+
+        <!-- 1. Life Insurance (LIC) -->
+        <div class="service-card" data-service="Life Insurance">
+          <div class="service-card-top">
+            <div class="service-brand-tag lic">
+              <span class="partner-name"><i class="fa-solid fa-shield-heart"></i> LIC OF INDIA</span>
+            </div>
+            <span class="service-badge-pill">Life Protection</span>
+          </div>
+          <div class="service-body">
+            <h3 class="service-name">Life Insurance & Family Security</h3>
+            <p class="service-tagline">“Security for Your Family, Guarantee for Your Future”</p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Term Life Insurance</strong> (High cover with affordable premiums)</li>
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Guaranteed Savings & Endowment Plans</strong></li>
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Child Higher Education & Marriage Funds</strong></li>
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Retirement & Lifetime Annuity / Pension</strong></li>
+            </ul>
+            <div class="service-action-row">
+              <button class="btn-inquire" onclick="inquireService('LIC Life Insurance')">
+                <i class="fa-brands fa-whatsapp"></i> Get Quote / Consult
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Mutual Funds & SIP (AMFI / NJ Wealth) -->
+        <div class="service-card featured" data-service="Mutual Funds & SIP">
+          <div class="featured-ribbon">POPULAR</div>
+          <div class="service-card-top">
+            <div class="service-brand-tag nj">
+              <span class="partner-name"><i class="fa-solid fa-chart-pie"></i> NJ WEALTH PARTNER</span>
+            </div>
+            <span class="service-badge-pill amfi-tag">AMFI Registered</span>
+          </div>
+          <div class="service-body">
+            <h3 class="service-name">Mutual Funds & Wealth Creation</h3>
+            <p class="service-tagline">“Plan Today, Prosper Tomorrow”</p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-circle-check"></i> <strong>SIP (Systematic Investment Plans)</strong> from ₹500/month</li>
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Tax Saving ELSS Funds</strong> (Section 80C Tax Deduction)</li>
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Equity, Hybrid & Debt Portfolio Allocation</strong></li>
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Goal-Based Wealth Planning</strong> (Retirement, House, Kids)</li>
+            </ul>
+            <div class="service-action-row">
+              <button class="btn-inquire" onclick="inquireService('Mutual Funds SIP')">
+                <i class="fa-brands fa-whatsapp"></i> Start Your SIP
+              </button>
+              <button class="btn-calc-link" onclick="openCalculatorTab('sip')">
+                <i class="fa-solid fa-calculator"></i> SIP Calculator
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. General & Health Insurance (TATA AIG) -->
+        <div class="service-card" data-service="General Insurance">
+          <div class="service-card-top">
+            <div class="service-brand-tag tata">
+              <span class="partner-name"><i class="fa-solid fa-heart-pulse"></i> TATA AIG INSURANCE</span>
+            </div>
+            <span class="service-badge-pill">Health & Asset</span>
+          </div>
+          <div class="service-body">
+            <h3 class="service-name">General & Health Insurance</h3>
+            <p class="service-tagline">“Protection in Every Situation, With You Always”</p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Comprehensive Health / Mediclaim Insurance</strong> (Cashless Hospitalization)</li>
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Motor Insurance</strong> (Car, Two-Wheeler & Commercial Vehicles)</li>
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Critical Illness & Super Top-Up Plans</strong></li>
+              <li><i class="fa-solid fa-circle-check"></i> <strong>International Travel & Business Insurance</strong></li>
+            </ul>
+            <div class="service-action-row">
+              <button class="btn-inquire" onclick="inquireService('Health / Motor Insurance')">
+                <i class="fa-brands fa-whatsapp"></i> Get Insurance Plan
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. National Pension Scheme (HDFC Pension) -->
+        <div class="service-card" data-service="NPS Pension">
+          <div class="service-card-top">
+            <div class="service-brand-tag hdfc">
+              <span class="partner-name"><i class="fa-solid fa-umbrella"></i> HDFC PENSION</span>
+            </div>
+            <span class="service-badge-pill">Government Backed</span>
+          </div>
+          <div class="service-body">
+            <h3 class="service-name">National Pension Scheme (NPS)</h3>
+            <p class="service-tagline">“Secure Today, Confident Tomorrow”</p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Additional ₹50,000 Tax Benefit</strong> u/s 80CCD(1B)</li>
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Low Cost, Market-Linked Compounding Returns</strong></li>
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Regular Monthly Pension</strong> after age 60</li>
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Tier 1 & Tier 2 Account Advisory & Management</strong></li>
+            </ul>
+            <div class="service-action-row">
+              <button class="btn-inquire" onclick="inquireService('HDFC Pension NPS')">
+                <i class="fa-brands fa-whatsapp"></i> Open NPS Account
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Loans & Financial Distribution (Andromeda) -->
+        <div class="service-card" data-service="Loans & Finance">
+          <div class="service-card-top">
+            <div class="service-brand-tag andromeda">
+              <span class="partner-name"><i class="fa-solid fa-landmark"></i> ANDROMEDA DSA PARTNER</span>
+            </div>
+            <span class="service-badge-pill">India's #1 Loan DSA</span>
+          </div>
+          <div class="service-body">
+            <h3 class="service-name">Loans & Financial Solutions</h3>
+            <p class="service-tagline">“Lowest Interest Rates & Hassle-free Approvals”</p>
+            <div class="loan-chips-grid">
+              <span class="loan-chip"><i class="fa-solid fa-house"></i> Home Loan</span>
+              <span class="loan-chip"><i class="fa-solid fa-briefcase"></i> Business Loan</span>
+              <span class="loan-chip"><i class="fa-solid fa-building-wheat"></i> Against Property (LAP)</span>
+              <span class="loan-chip"><i class="fa-solid fa-user"></i> Personal Loan</span>
+              <span class="loan-chip"><i class="fa-solid fa-car"></i> Car / Auto Loan</span>
+              <span class="loan-chip"><i class="fa-solid fa-graduation-cap"></i> Education Loan</span>
+              <span class="loan-chip"><i class="fa-solid fa-coins"></i> Working Capital / OD / CC</span>
+            </div>
+            <div class="service-action-row">
+              <button class="btn-inquire" onclick="inquireService('Loan Inquiry')">
+                <i class="fa-brands fa-whatsapp"></i> Check Loan Eligibility
+              </button>
+              <button class="btn-calc-link" onclick="openCalculatorTab('emi')">
+                <i class="fa-solid fa-calculator"></i> EMI Calculator
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TAB 2: Institutional Alliances & Partners -->
+    <section class="tab-pane" id="tab-partners">
+      <div class="section-header">
+        <span class="section-badge">AUTHORIZATIONS & TIE-UPS</span>
+        <h2 class="section-title">Trusted Institutional Alliances</h2>
+        <p class="section-subtitle">Direct agency and distribution partnerships with India's most reputed financial institutions.</p>
+      </div>
+
+      <div class="partners-grid">
+        
+        <!-- LIC -->
+        <div class="partner-box">
+          <div class="partner-icon-circle lic-bg">
+            <i class="fa-solid fa-hands-holding-child"></i>
+          </div>
+          <div class="partner-details">
+            <div class="partner-brand-header">
+              <h3>LIC of India</h3>
+              <span class="p-type">Life Insurance</span>
+            </div>
+            <p class="partner-desc">Life Insurance Corporation of India — India's largest and most trusted sovereign-backed life insurer.</p>
+            <div class="partner-highlights">
+              <span><i class="fa-solid fa-check"></i> Term Plans</span>
+              <span><i class="fa-solid fa-check"></i> Pension</span>
+              <span><i class="fa-solid fa-check"></i> Endowment</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- NJ WEALTH -->
+        <div class="partner-box">
+          <div class="partner-icon-circle nj-bg">
+            <i class="fa-solid fa-arrow-trend-up"></i>
+          </div>
+          <div class="partner-details">
+            <div class="partner-brand-header">
+              <h3>NJ Wealth Partner</h3>
+              <span class="p-type">Mutual Funds & AMFI</span>
+            </div>
+            <p class="partner-desc">India’s leading financial products distribution network with seamless digital tracking and portfolio analysis.</p>
+            <div class="partner-highlights">
+              <span><i class="fa-solid fa-check"></i> SIP Online</span>
+              <span><i class="fa-solid fa-check"></i> 40+ AMCs</span>
+              <span><i class="fa-solid fa-check"></i> Zero Paperwork</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- TATA AIG -->
+        <div class="partner-box">
+          <div class="partner-icon-circle tata-bg">
+            <i class="fa-solid fa-shield-virus"></i>
+          </div>
+          <div class="partner-details">
+            <div class="partner-brand-header">
+              <h3>TATA AIG General Insurance</h3>
+              <span class="p-type">General & Health</span>
+            </div>
+            <p class="partner-desc">Trusted TATA heritage providing premium health insurance, auto insurance, travel protection, and business safety.</p>
+            <div class="partner-highlights">
+              <span><i class="fa-solid fa-check"></i> Cashless Claims</span>
+              <span><i class="fa-solid fa-check"></i> Fast Settlement</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- HDFC PENSION -->
+        <div class="partner-box">
+          <div class="partner-icon-circle hdfc-bg">
+            <i class="fa-solid fa-building-columns"></i>
+          </div>
+          <div class="partner-details">
+            <div class="partner-brand-header">
+              <h3>HDFC Pension</h3>
+              <span class="p-type">National Pension Scheme</span>
+            </div>
+            <p class="partner-desc">India’s #1 Pension Fund Manager under PFRDA regulations for high-yield retirement corpus accumulation.</p>
+            <div class="partner-highlights">
+              <span><i class="fa-solid fa-check"></i> Extra 50k 80CCD</span>
+              <span><i class="fa-solid fa-check"></i> Compounding Returns</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ANDROMEDA -->
+        <div class="partner-box">
+          <div class="partner-icon-circle andromeda-bg">
+            <i class="fa-solid fa-building"></i>
+          </div>
+          <div class="partner-details">
+            <div class="partner-brand-header">
+              <h3>Andromeda Sales & Distribution</h3>
+              <span class="p-type">India's Largest Loan DSA</span>
+            </div>
+            <p class="partner-desc">Authorized partner connecting you to 70+ Banks & NBFCs with the best interest rates and quick sanctions.</p>
+            <div class="partner-highlights">
+              <span><i class="fa-solid fa-check"></i> 70+ Banks/NBFCs</span>
+              <span><i class="fa-solid fa-check"></i> Doorstep Service</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TAB 3: Interactive Financial Calculators -->
+    <section class="tab-pane" id="tab-calculators">
+      <div class="section-header">
+        <span class="section-badge">INTERACTIVE TOOLS</span>
+        <h2 class="section-title">Calculate & Plan Your Wealth</h2>
+        <p class="section-subtitle">Experience the power of compounding SIP returns and plan your loan EMIs effortlessly.</p>
+      </div>
+
+      <!-- Calculator Sub-tabs -->
+      <div class="calc-toggle-group">
+        <button class="calc-toggle-btn active" id="btnShowSip" onclick="switchCalculator('sip')">
+          <i class="fa-solid fa-chart-line"></i> SIP Returns Calculator
+        </button>
+        <button class="calc-toggle-btn" id="btnShowEmi" onclick="switchCalculator('emi')">
+          <i class="fa-solid fa-calculator"></i> Loan EMI Calculator
+        </button>
+      </div>
+
+      <!-- 1. SIP Calculator -->
+      <div class="calculator-container" id="sipCalcContainer">
+        <div class="calc-card">
+          <div class="calc-header">
+            <h3><i class="fa-solid fa-coins text-gold"></i> Mutual Fund SIP Calculator</h3>
+            <p>See how disciplined monthly investments compound over time</p>
+          </div>
+
+          <!-- Slider 1: Monthly Investment -->
+          <div class="input-control-group">
+            <div class="input-label-row">
+              <label for="sipAmount">Monthly Investment (₹)</label>
+              <div class="input-val-badge">₹ <span id="sipAmountDisplay">10,000</span></div>
+            </div>
+            <input type="range" id="sipAmount" min="500" max="100000" step="500" value="10000" class="custom-range" />
+            <div class="range-limits">
+              <span>₹500</span>
+              <span>₹50,000</span>
+              <span>₹1,00,000</span>
+            </div>
+          </div>
+
+          <!-- Slider 2: Expected Return Rate -->
+          <div class="input-control-group">
+            <div class="input-label-row">
+              <label for="sipRate">Expected Annual Return Rate (%)</label>
+              <div class="input-val-badge"><span id="sipRateDisplay">12</span> %</div>
+            </div>
+            <input type="range" id="sipRate" min="5" max="25" step="0.5" value="12" class="custom-range" />
+            <div class="range-limits">
+              <span>5%</span>
+              <span>12% (Balanced)</span>
+              <span>25%</span>
+            </div>
+          </div>
+
+          <!-- Slider 3: Time Horizon (Years) -->
+          <div class="input-control-group">
+            <div class="input-label-row">
+              <label for="sipYears">Investment Period (Years)</label>
+              <div class="input-val-badge"><span id="sipYearsDisplay">15</span> Years</div>
+            </div>
+            <input type="range" id="sipYears" min="1" max="35" step="1" value="15" class="custom-range" />
+            <div class="range-limits">
+              <span>1 Yr</span>
+              <span>15 Yrs</span>
+              <span>35 Yrs</span>
+            </div>
+          </div>
+
+          <!-- Result Summary Box -->
+          <div class="calc-result-box">
+            <div class="result-metric">
+              <span class="m-label">Total Invested</span>
+              <span class="m-val" id="sipInvested">₹ 18,00,000</span>
+            </div>
+            <div class="result-metric highlight-green">
+              <span class="m-label">Estimated Wealth Gain</span>
+              <span class="m-val" id="sipReturns">₹ 32,45,760</span>
+            </div>
+            <div class="result-metric total">
+              <span class="m-label">Total Future Maturity Value</span>
+              <span class="m-val gold" id="sipTotalValue">₹ 50,45,760</span>
+            </div>
+          </div>
+
+          <!-- Quick Action CTA -->
+          <div class="calc-cta-row">
+            <button class="btn-primary-glow" onclick="inquireSipPlan()">
+              <i class="fa-brands fa-whatsapp"></i> Start This SIP with Mukesh ji
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. EMI Calculator -->
+      <div class="calculator-container hidden" id="emiCalcContainer">
+        <div class="calc-card">
+          <div class="calc-header">
+            <h3><i class="fa-solid fa-house-chimney text-gold"></i> Loan EMI Calculator</h3>
+            <p>Calculate your estimated monthly installment for Home, Business or Personal loans</p>
+          </div>
+
+          <!-- Slider 1: Loan Amount -->
+          <div class="input-control-group">
+            <div class="input-label-row">
+              <label for="loanAmount">Loan Amount (₹)</label>
+              <div class="input-val-badge">₹ <span id="loanAmountDisplay">30,00,000</span></div>
+            </div>
+            <input type="range" id="loanAmount" min="50000" max="20000000" step="50000" value="3000000" class="custom-range" />
+            <div class="range-limits">
+              <span>₹50K</span>
+              <span>₹1 Crore</span>
+              <span>₹2 Crore</span>
+            </div>
+          </div>
+
+          <!-- Slider 2: Interest Rate -->
+          <div class="input-control-group">
+            <div class="input-label-row">
+              <label for="loanRate">Interest Rate (% p.a.)</label>
+              <div class="input-val-badge"><span id="loanRateDisplay">8.5</span> %</div>
+            </div>
+            <input type="range" id="loanRate" min="6" max="24" step="0.1" value="8.5" class="custom-range" />
+            <div class="range-limits">
+              <span>6% (Home)</span>
+              <span>12% (Personal)</span>
+              <span>24%</span>
+            </div>
+          </div>
+
+          <!-- Slider 3: Loan Tenure -->
+          <div class="input-control-group">
+            <div class="input-label-row">
+              <label for="loanTenure">Loan Tenure (Years)</label>
+              <div class="input-val-badge"><span id="loanTenureDisplay">20</span> Years</div>
+            </div>
+            <input type="range" id="loanTenure" min="1" max="30" step="1" value="20" class="custom-range" />
+            <div class="range-limits">
+              <span>1 Yr</span>
+              <span>15 Yrs</span>
+              <span>30 Yrs</span>
+            </div>
+          </div>
+
+          <!-- Result Summary Box -->
+          <div class="calc-result-box">
+            <div class="result-metric total">
+              <span class="m-label">Monthly EMI to Pay</span>
+              <span class="m-val gold large" id="loanMonthlyEmi">₹ 26,035</span>
+            </div>
+            <div class="result-metric">
+              <span class="m-label">Total Interest Payable</span>
+              <span class="m-val" id="loanTotalInterest">₹ 32,48,335</span>
+            </div>
+            <div class="result-metric">
+              <span class="m-label">Total Principal + Interest</span>
+              <span class="m-val" id="loanTotalPayment">₹ 62,48,335</span>
+            </div>
+          </div>
+
+          <!-- Quick Action CTA -->
+          <div class="calc-cta-row">
+            <button class="btn-primary-glow" onclick="inquireLoanEligibility()">
+              <i class="fa-brands fa-whatsapp"></i> Apply / Check Lowest Rates
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- TAB 4: Contact & Office Location -->
+    <section class="tab-pane" id="tab-contact">
+      <div class="section-header">
+        <span class="section-badge">GET IN TOUCH</span>
+        <h2 class="section-title">Office & Contact Details</h2>
+        <p class="section-subtitle">Reach out for personalized financial advice or visit our Ahmedabad office.</p>
+      </div>
+
+      <!-- Contact Info Cards -->
+      <div class="contact-cards-stack">
+
+        <!-- Mobile -->
+        <a href="tel:+919898998238" class="contact-info-card">
+          <div class="card-icon-round blue">
+            <i class="fa-solid fa-phone"></i>
+          </div>
+          <div class="card-text">
+            <span class="c-title">Direct Mobile / Call</span>
+            <span class="c-val">+91 98989 98238</span>
+          </div>
+          <i class="fa-solid fa-chevron-right card-arrow"></i>
+        </a>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/919898998238?text=Hello%20Mukesh%20ji%2C%20I%20want%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener" class="contact-info-card">
+          <div class="card-icon-round green">
+            <i class="fa-brands fa-whatsapp"></i>
+          </div>
+          <div class="card-text">
+            <span class="c-title">WhatsApp Support</span>
+            <span class="c-val">+91 98989 98238 (Instant Chat)</span>
+          </div>
+          <i class="fa-solid fa-chevron-right card-arrow"></i>
+        </a>
+
+        <!-- Email -->
+        <a href="mailto:mksh.brahmbhatt@gmail.com" class="contact-info-card">
+          <div class="card-icon-round red">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <div class="card-text">
+            <span class="c-title">Official Email</span>
+            <span class="c-val">mksh.brahmbhatt@gmail.com</span>
+          </div>
+          <i class="fa-solid fa-chevron-right card-arrow"></i>
+        </a>
+
+        <!-- Office Address -->
+        <div class="contact-info-card address-card">
+          <div class="card-icon-round gold">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <div class="card-text">
+            <span class="c-title">Office Address</span>
+            <span class="c-val address-full">
+              Flat No-K502, Anand ilyf,<br />
+              Nr. Vaishnodevi Underpass, Vaishnodevi to Zundal Circle,<br />
+              Tragad, S.P. Ring Road, Ahmedabad - 382470
+            </span>
+          </div>
+        </div>
+
+        <a href="https://maps.google.com/?q=Anand+ilyf+Vaishnodevi+Underpass+Tragad+Ahmedabad+382470" target="_blank" rel="noopener" class="btn-maps-large">
+          <i class="fa-solid fa-diamond-turn-right"></i>
+          <span>Open in Google Maps for Directions</span>
+        </a>
+      </div>
+
+      <!-- Quick Inquiry Form -->
+      <div class="inquiry-form-card">
+        <div class="form-header">
+          <h3><i class="fa-solid fa-paper-plane text-gold"></i> Quick Consultation Request</h3>
+          <p>Fill this quick note and connect directly on WhatsApp</p>
+        </div>
+        <form id="leadForm" onsubmit="handleLeadFormSubmit(event)">
+          <div class="form-group">
+            <label for="clientName">Your Full Name</label>
+            <input type="text" id="clientName" placeholder="e.g. Ramesh Patel" required />
+          </div>
+
+          <div class="form-group">
+            <label for="clientPhone">Your Phone Number</label>
+            <input type="tel" id="clientPhone" placeholder="e.g. 9876543210" required />
+          </div>
+
+          <div class="form-group">
+            <label for="serviceInterest">Service Interested In</label>
+            <select id="serviceInterest">
+              <option value="Mutual Funds & SIP Investment">Mutual Funds & SIP Investment</option>
+              <option value="LIC Life Insurance Policy">LIC Life Insurance Policy</option>
+              <option value="TATA AIG Health / Motor Insurance">TATA AIG Health / Motor Insurance</option>
+              <option value="HDFC Pension (NPS) Account">HDFC Pension (NPS) Account</option>
+              <option value="Home Loan / Business Loan (Andromeda)">Home Loan / Business Loan (Andromeda)</option>
+              <option value="Complete Portfolio Review">Complete Portfolio Review</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="clientMessage">Message / Requirement (Optional)</label>
+            <textarea id="clientMessage" rows="2" placeholder="Tell us about your requirement or preferred time to call..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit-lead">
+            <i class="fa-brands fa-whatsapp"></i> Send Inquiry via WhatsApp
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer Branding -->
+    <footer class="app-footer">
+      <div class="footer-logo">
+        <span class="red-text">MK</span> <span class="blue-text">InsuVesta Services</span>
+      </div>
+      <p class="footer-slogan">Insure with Confidence, Investment with Ease</p>
+      <div class="footer-divider"></div>
+      <p class="footer-copy">
+        © <span id="currentYear">2026</span> Mukesh K. Brahmbhatt. All Rights Reserved.<br />
+        <span class="sub-disclaimer">Mutual fund investments are subject to market risks. Read all scheme-related documents carefully.</span>
+      </p>
+    </footer>
+
+    <!-- Bottom Sticky Contact Bar for Mobile -->
+    <div class="mobile-sticky-bar">
+      <a href="tel:+919898998238" class="sticky-btn call">
+        <i class="fa-solid fa-phone"></i>
+        <span>Call</span>
+      </a>
+      <a href="https://wa.me/919898998238?text=Hello%20Mukesh%20ji%2C%20I%20would%20like%20to%20consult%20with%20you." target="_blank" rel="noopener" class="sticky-btn whatsapp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>WhatsApp</span>
+      </a>
+      <button id="stickySaveContactBtn" class="sticky-btn save">
+        <i class="fa-solid fa-address-book"></i>
+        <span>Save Contact</span>
+      </button>
+    </div>
+
+  </main>
+
+  <!-- MODAL: QR Code & Share Profile -->
+  <div class="modal-backdrop" id="qrModal">
+    <div class="modal-box">
+      <button class="modal-close-btn" id="closeQrModal" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <div class="modal-icon-badge">
+          <i class="fa-solid fa-qrcode"></i>
+        </div>
+        <h3>Scan or Share Digital Card</h3>
+        <p>Scan this QR code with any phone camera or NFC reader to open this card</p>
+      </div>
+
+      <div class="qr-canvas-wrapper">
+        <div id="qrcodeContainer"></div>
+        <div class="qr-center-logo">
+          <span>MK</span>
+        </div>
+      </div>
+
+      <div class="share-url-box">
+        <input type="text" id="shareUrlInput" readonly value="" />
+        <button id="copyUrlBtn" class="btn-copy">
+          <i class="fa-solid fa-copy"></i> Copy
+        </button>
+      </div>
+
+      <div class="modal-actions-row">
+        <button id="nativeShareBtn" class="btn-modal-share">
+          <i class="fa-solid fa-share-nodes"></i> Share Link
+        </button>
+        <button id="modalSaveContactBtn" class="btn-modal-contact">
+          <i class="fa-solid fa-user-plus"></i> Save Contact (.vcf)
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toastMessage">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toastText">Contact file downloaded!</span>
+  </div>
+
+  <!-- QR Code Library CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <!-- Main Application Logic -->
+  <script src="app.js"></script>
+</body>
+</html>
