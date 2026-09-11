@@ -243,6 +243,22 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+}
+
+.official-logo-img {
+  max-height: 92px;
+  max-width: 90%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.7));
+  display: block;
+  margin: 0 auto;
+}
+
+.banner-svg-logo-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 14px;
   width: 100%;
 }

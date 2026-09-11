@@ -28,6 +28,7 @@ const CONTACT_DATA = {
 
 // Initialize DOM Events
 document.addEventListener("DOMContentLoaded", () => {
+  initLogoAutoDetect();
   initProfileImageAutoDetect();
   initTabNavigation();
   initContactDownloadButtons();
@@ -80,6 +81,50 @@ function initProfileImageAutoDetect() {
   }
 
   tryNext();
+}
+
+/**
+ * 0.1 Smart Logo Auto-Detect (.png, .jpg, .jpeg, .webp)
+ */
+function initLogoAutoDetect() {
+  const logoImg = document.getElementById("bannerLogoImg");
+  const fallback = document.getElementById("svgLogoFallback");
+  if (!logoImg) return;
+
+  const candidateLogos = [
+    "logo.png",
+    "logo.jpg",
+    "logo.jpeg",
+    "logo.webp",
+    "logo.PNG",
+    "logo.JPG",
+    "logo.JPEG",
+    "assets/logo.png",
+    "assets/logo.jpg"
+  ];
+
+  let lIndex = 0;
+
+  function tryNextLogo() {
+    if (lIndex < candidateLogos.length) {
+      const src = candidateLogos[lIndex++];
+      const testImg = new Image();
+      testImg.onload = function() {
+        logoImg.src = src;
+        logoImg.style.display = "block";
+        if (fallback) fallback.style.display = "none";
+      };
+      testImg.onerror = function() {
+        tryNextLogo();
+      };
+      testImg.src = src;
+    } else {
+      logoImg.style.display = "none";
+      if (fallback) fallback.style.display = "flex";
+    }
+  }
+
+  tryNextLogo();
 }
 
 // Update Copyright Year
