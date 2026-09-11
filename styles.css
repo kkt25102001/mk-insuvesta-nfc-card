@@ -16,8 +16,9 @@
   --gold-dark: #a17816;
   --gold-gradient: linear-gradient(135deg, #ffe580 0%, #d4af37 50%, #9e7414 100%);
   
-  --crimson-red: #e62020;
-  --crimson-gradient: linear-gradient(135deg, #ff4141 0%, #cc0000 100%);
+  --crimson-red: #d61414;
+  --logo-red: #d61414;
+  --crimson-gradient: linear-gradient(135deg, #e62020 0%, #b80000 100%);
   
   --royal-blue: #1b65db;
   --royal-blue-dark: #0d3880;
@@ -374,17 +375,20 @@ body {
 
 .brand-title {
   font-family: var(--font-heading);
-  font-size: 1.25rem;
+  font-size: 1.28rem;
   font-weight: 800;
   letter-spacing: 0.4px;
 }
 
 .red-text {
-  color: #ff3333;
+  color: #d61414;
+  font-weight: 800;
+  text-shadow: 0 0 12px rgba(214, 20, 20, 0.35);
 }
 
 .blue-text {
   color: #4da3ff;
+  font-weight: 700;
 }
 
 .bold {
@@ -1685,10 +1689,10 @@ body {
 }
 
 .footer-slogan {
-  font-size: 0.74rem;
-  color: var(--text-muted);
+  font-size: 0.82rem;
   font-style: italic;
-  margin-top: 2px;
+  margin-top: 4px;
+  letter-spacing: 0.3px;
 }
 
 .footer-divider {
