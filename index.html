@@ -114,7 +114,7 @@
       <!-- Avatar & Verified Badge -->
       <div class="avatar-container">
         <div class="avatar-ring">
-          <img src="profile.jpg" alt="Mukesh K. Brahmbhatt" class="avatar-img" id="avatarImg" onerror="this.onerror=null; this.src='profile.png'; this.parentElement.classList.add('use-svg-fallback');" />
+          <img src="profile.jpg" alt="Mukesh K. Brahmbhatt" class="avatar-img" id="avatarImg" onerror="if(!this.dataset.triedJpeg){this.dataset.triedJpeg=1;this.src='profile.jpeg';}else if(!this.dataset.triedPng){this.dataset.triedPng=1;this.src='profile.png';}else{this.parentElement.classList.add('use-svg-fallback');}" />
           
           <!-- Luxury Gold Crest Seal Fallback for Mukesh Brahmbhatt (MK InsuVesta) -->
           <div class="avatar-svg-fallback">

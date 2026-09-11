@@ -28,6 +28,7 @@ const CONTACT_DATA = {
 
 // Initialize DOM Events
 document.addEventListener("DOMContentLoaded", () => {
+  initProfileImageAutoDetect();
   initTabNavigation();
   initContactDownloadButtons();
   initQrModalAndSharing();
@@ -35,6 +36,51 @@ document.addEventListener("DOMContentLoaded", () => {
   initEmiCalculator();
   initYear();
 });
+
+/**
+ * 0. Smart Profile Photo Auto-Detect (.jpg, .jpeg, .png, .webp)
+ */
+function initProfileImageAutoDetect() {
+  const avatar = document.getElementById("avatarImg");
+  const ring = document.querySelector(".avatar-ring");
+  if (!avatar) return;
+
+  const candidateFormats = [
+    "profile.jpg",
+    "profile.jpeg",
+    "profile.png",
+    "profile.webp",
+    "profile.JPG",
+    "profile.JPEG",
+    "profile.PNG",
+    "assets/profile.jpg",
+    "assets/profile.jpeg",
+    "assets/profile.png"
+  ];
+
+  let index = 0;
+
+  function tryNext() {
+    if (index < candidateFormats.length) {
+      const src = candidateFormats[index++];
+      const testImg = new Image();
+      testImg.onload = function() {
+        avatar.src = src;
+        avatar.style.display = "block";
+        if (ring) ring.classList.remove("use-svg-fallback");
+      };
+      testImg.onerror = function() {
+        tryNext();
+      };
+      testImg.src = src;
+    } else {
+      // If no local image file found, show luxury seal
+      if (ring) ring.classList.add("use-svg-fallback");
+    }
+  }
+
+  tryNext();
+}
 
 // Update Copyright Year
 function initYear() {
